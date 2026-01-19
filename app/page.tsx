@@ -13,10 +13,10 @@ import { FilterIcon, SearchIcon } from "lucide-react";
 export default function Home() {
   return (
     <ScrollArea className="h-screen bg-background">
-      <div className="flex w-full flex-col items-baseline px-[25vw] justify-center gap-12">
+      <div className="flex w-full flex-col items-baseline px-[25%] justify-center gap-12">
         <div>
           <p className="font-mono text-2xl mb-2">Buttons</p>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
             <Button variant={"default"}>Default Button</Button>
             <Button variant={"ghost"}>Ghost Button</Button>
             <Button variant={"outline"}>Outline Button</Button>
@@ -25,8 +25,10 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <p className="font-mono text-2xl mb-2">Input & Label in Group</p>
-          <div className="grid grid-cols-3 gap-3">
+          <p className="font-mono text-2xl mb-2">
+            Input & Label sm:grid-cols-1in Group
+          </p>
+          <div className="grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
             <Group>
               <Label>Normal Input</Label>
               <Input placeholder="Input..." className="w-full" />
@@ -51,7 +53,7 @@ export default function Home() {
         </div>
         <div>
           <p className="font-mono text-2xl mb-2">Select</p>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
             <Group>
               <Label>Normal Select</Label>
               <Select
@@ -65,7 +67,7 @@ export default function Home() {
         </div>
         <div>
           <p className="font-mono text-2xl mb-2">Checkbox</p>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
             <Group>
               <Label>Normal Checkbox</Label>
               <Checkbox
@@ -86,7 +88,7 @@ export default function Home() {
         </div>
         <div>
           <p className="font-mono text-2xl mb-2">ScrollArea</p>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
             <Group>
               <Label>Normal ScrollArea</Label>
               <ScrollArea className="h-48">
