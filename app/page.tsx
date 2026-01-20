@@ -1,8 +1,10 @@
 "use client";
 
+import { AlertDialog } from "@/ui/alert-dialog";
 import { Button } from "@/ui/button";
 import { Checkbox } from "@/ui/checkbox";
 import { CheckboxGroup } from "@/ui/checkbox-group";
+import { ContextMenu } from "@/ui/context-menu";
 import { Group } from "@/ui/group";
 import { Input } from "@/ui/input";
 import { Label } from "@/ui/label";
@@ -16,7 +18,7 @@ export default function Home() {
       <div className="flex w-full flex-col items-baseline px-[25%] justify-center gap-12">
         <div>
           <p className="font-mono text-2xl mb-2">Buttons</p>
-          <div className="grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
+          <div className="grid grid-cols-3 gap-3 ">
             <Button variant={"default"}>Default Button</Button>
             <Button variant={"ghost"}>Ghost Button</Button>
             <Button variant={"outline"}>Outline Button</Button>
@@ -25,10 +27,8 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <p className="font-mono text-2xl mb-2">
-            Input & Label sm:grid-cols-1in Group
-          </p>
-          <div className="grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
+          <p className="font-mono text-2xl mb-2">Input & Label</p>
+          <div className="grid grid-cols-3 gap-3 ">
             <Group>
               <Label>Normal Input</Label>
               <Input placeholder="Input..." className="w-full" />
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
         <div>
           <p className="font-mono text-2xl mb-2">Select</p>
-          <div className="grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
+          <div className="grid grid-cols-3 gap-3 ">
             <Group>
               <Label>Normal Select</Label>
               <Select
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
         <div>
           <p className="font-mono text-2xl mb-2">Checkbox</p>
-          <div className="grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
+          <div className="grid grid-cols-3 gap-3 ">
             <Group>
               <Label>Normal Checkbox</Label>
               <Checkbox
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
         <div>
           <p className="font-mono text-2xl mb-2">ScrollArea</p>
-          <div className="grid grid-cols-3 gap-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
+          <div className="grid grid-cols-3 gap-3 ">
             <Group>
               <Label>Normal ScrollArea</Label>
               <ScrollArea className="h-48">
@@ -118,6 +118,34 @@ export default function Home() {
                   interest in sustainable design.
                 </p>
               </ScrollArea>
+            </Group>
+          </div>
+        </div>
+        <div>
+          <p className="font-mono text-2xl mb-2">Alert Dialog</p>
+          <div className="grid grid-cols-3 gap-3 ">
+            <Group>
+              <Label>Normal Alert Dialog</Label>
+              <AlertDialog
+                trigger={<Button variant={"danger"}>Click it!!</Button>}
+              />
+            </Group>
+          </div>
+        </div>
+        <div>
+          <p className="font-mono text-2xl mb-2">ContextMenu</p>
+          <div className="grid grid-cols-3 gap-3 ">
+            <Group>
+              <Label>Normal Context Menu</Label>
+              <ContextMenu
+                items={[
+                  { title: "Item 1", type: "item" },
+                  { title: "Item 2", type: "item" },
+                  { title: "Sep", type: "separator" },
+                  { title: "Item 3", type: "item" },
+                  { title: "Item 4", type: "item" },
+                ]}
+              />
             </Group>
           </div>
         </div>
